@@ -1,0 +1,119 @@
+.widgetContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  width: 305px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 22px 30px 18px;
+  background-color: #FFF;
+  border: 1px solid #F1F4F6;
+  border-bottom: 3px solid #FEDEDD;
+  box-sizing: border-box;
+
+  &:not(:last-child) {
+    margin-right: 38px;
+  }
+  p,
+  h2 {
+    width: 243px;
+    text-align: center;
+  }
+  p {
+    min-height: 130px;
+  }
+}
+
+.actionsContainer {
+  position: relative;
+  float: right;
+  top: -19px;
+  right: -110px;
+  .dots {
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+    border: 1px solid #F1F4F6;
+    box-sizing: border-box;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: rgba(52, 61, 72, 0.5);;
+    }
+  }
+  ul {
+    padding: 9px 0;
+    position: absolute;
+    top: -16px;
+    left: 38px;
+    background: #FFFFFF;
+    border: 1px solid #F1F4F6;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 50px rgba(50, 50, 93, 0.07);
+    border-radius: 5px;
+    li {
+      cursor: pointer;
+      font-size: 16px;
+      font-family: 'Avenir';
+      color: #0F2137;
+      display: flex;
+      padding: 7px 20px;
+
+      svg {
+        width: 17px;
+        height: 17px;
+        margin-right: 16px;
+      }
+
+      @mixin hover-item {
+        color: #FFF;
+        background-color: #B05EFD;
+        svg {
+          fill: #FFF;
+        }
+      }
+      &.selected {
+        @include hover-item;
+      }
+      &:hover {
+        @include hover-item;
+      }
+      &.danger {
+        color: #EB5757;
+        fill: #EB5757;
+        &:hover {
+          @include hover-item;
+        }
+      }
+    }
+    
+  }
+} 
+
+.mainIcon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: #FEDEDD;
+  svg {
+    margin-top: 6px;
+    margin-left: 1px; 
+    fill: #EB5757;
+    width: 29px;
+    height: 29px;
+  }
+}
