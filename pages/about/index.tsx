@@ -1,43 +1,10 @@
-import Nav from '../../components/nav';
-import Widget from '../../components/widget';
-import widgetStyles from '../../styles/Widget.module.scss';
+import { FunctionComponent } from 'react';
+import MainContainer from '../../components/mainContainer';
 
-const DESCRIPTION = "An internal document that details the operating rules for the corporation and are typically adopted at the organizational meeting of the board of directors.";
-const TITLE = "Corporate Bylaws";
-const About = () => (
-  <>
-   <Nav />
-  <div className={widgetStyles.widgetContainer}>
-    <Widget
-      title={TITLE}
-      description={DESCRIPTION}
-      buttonConfig={{
-        label: 'View document',
-        click: () => { console.log('click on document') }
-      }}
-      actionsConfig={{
-        onDownloadAction: () => { console.log('click on download') },
-        onPrintAction: () => { console.log('click on print') },
-        onDeleteAction: () => { console.log('click on delete action') }
-      }}
-    />
-
-    <Widget
-      displayActions
-      title={TITLE}
-      description={DESCRIPTION}
-      buttonConfig={{
-        label: 'View document',
-        click: () => { console.log('click on document') }
-      }}
-      actionsConfig={{
-        onDownloadAction: () => { console.log('click on download') },
-        onPrintAction: () => { console.log('click on print') },
-        onDeleteAction: () => { console.log('click on delete action') }
-      }}
-    />
-  </div>
-  </>
+const About: FunctionComponent = () => (
+  <MainContainer>
+    <h1>About us</h1>
+  </MainContainer>
 );
 
 export default About;

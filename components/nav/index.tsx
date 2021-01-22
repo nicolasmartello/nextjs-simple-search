@@ -1,35 +1,36 @@
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent } from 'react';
 import Link from 'next/link';
+// Constants
+import sections from '../../constants/nav';
 
-const Nav: FunctionComponent = () => {
-  const [selectedMenu, setSelectedMenu] = useState('home');
-  
-  return (
-    <ul>
-      <Link href="/">
-        <a
-          className={selectedMenu === 'home' ? 'nav--selected' : ''}
-        >
-          Home
-        </a>
-      </Link>
-      <Link href="/about">
-        <a
-          className={selectedMenu === 'about' ? 'nav--selected' : ''}
-        >
-          About us
-        </a>
-      </Link>
-      <Link href="/jumpstart">
-        <a
-          className={selectedMenu === 'about' ? 'nav--selected' : ''}
-        >
-          Jump start
-        </a>
-      </Link>
-    </ul>
-  );
-}
-  
+const {
+  HOME,
+  ABOUT
+} = sections;
+
+type PropsType = {
+  selectedMenu?: string
+};
+
+const Nav: FunctionComponent<PropsType> = ({
+  selectedMenu
+}: PropsType) => (
+  <ul>
+    <Link href="/">
+      <a
+        className={selectedMenu === HOME ? 'nav--selected' : ''}
+      >
+        Home
+      </a>
+    </Link>
+    <Link href="/about">
+      <a
+        className={selectedMenu === ABOUT ? 'nav--selected' : ''}
+      >
+        About us
+      </a>
+    </Link>
+  </ul>
+);
 
 export default Nav;

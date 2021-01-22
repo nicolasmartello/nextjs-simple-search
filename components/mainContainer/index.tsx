@@ -3,13 +3,13 @@ import { FunctionComponent, ReactNode } from 'react';
 import styles from '../../styles/Home.module.css';
 import Nav from '../nav';
 
-type mainProps = {
+interface PropsType {
   children: ReactNode,
   displayFooter?: boolean,
   title?: string | ReactNode
 };
 
-const MainContainer: FunctionComponent<mainProps> = ({
+const MainContainer: FunctionComponent<PropsType> = ({
   children,
   displayFooter = false,
   title
