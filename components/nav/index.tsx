@@ -5,7 +5,8 @@ import sections from '../../constants/nav';
 
 const {
   HOME,
-  ABOUT
+  ABOUT,
+  GIHPY_SEARCH
 } = sections;
 
 type PropsType = {
@@ -28,6 +29,13 @@ const Nav: FunctionComponent<PropsType> = ({
         className={selectedMenu === ABOUT ? 'nav--selected' : ''}
       >
         About us
+      </a>
+    </Link>
+    <Link href="/giphy">
+      <a
+        className={selectedMenu === GIHPY_SEARCH ? 'nav--selected' : ''}        
+      >
+        Search Giphy
       </a>
     </Link>
   </ul>

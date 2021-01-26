@@ -1,9 +1,13 @@
 
 import MainContainer from '../../components/mainContainer';
-import  GiphyService from '../../services/giphy';
+import GiphyService from '../../services/giphy';
+
+interface GiphyItemInterface {
+  title: string
+};
 
 interface GiphyProps {
-  list: Array<object>
+  list?: Array<GiphyItemInterface> | null
 };
 
 const Giphy = (props: GiphyProps) => {
@@ -12,7 +16,9 @@ const Giphy = (props: GiphyProps) => {
     <MainContainer>
       <h1>Giphy</h1>
       <div>
-        
+        {list && list.map(item => (
+          <a>{item.title}</a>  
+        ))}
       </div>
     </MainContainer>
   );
