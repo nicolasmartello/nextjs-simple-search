@@ -1,4 +1,4 @@
-import { NextFunctionComponent } from 'next';
+
 import MainContainer from '../../components/mainContainer';
 import  GiphyService from '../../services/giphy';
 
@@ -6,7 +6,7 @@ interface GiphyProps {
   list: Array<object>
 };
 
-const Giphy: NextFunctionComponent<GiphyProps> = (props: GiphyProps) => {
+const Giphy = (props: GiphyProps) => {
   const { list } = props;
   return (
     <MainContainer>
