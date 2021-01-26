@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 50px;
+  background: no-repeat center center;
+  background-color: #868e96;
+  background-attachment: scroll;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  a {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &:hover {
+      color:bisque;
+    }
+  }
+}
