@@ -2,7 +2,7 @@ import axios from 'axios';
 import config from './config.json';
 
 interface GiphyInterface {
-  get: (filterBy: object, limit: number) => object,
+  get: (filterBy: string, limit?: number) => object,
   getTrendingTopic: (limit?: number) => object,
 };
 
